@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -41,7 +41,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="">
+        <nav className="h-[81px]">
             <div className="bg-content-bg fixed top-0 left-0 right-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 xl:px-0 py-2">
                     <div className="flex items-center justify-between h-16">
@@ -49,8 +49,8 @@ const Navbar = () => {
                         <div className="lg:hidden flex items-center">
                             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                                 <SheetTrigger asChild>
-                                    <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                                        <Menu className="h-6 w-6 text-subtitle" />
+                                    <Button variant="ghost" size="icon" className="hover:bg-brand">
+                                        <Menu className="h-6 w-6 text-white" />
                                         <span className="sr-only">Toggle navigation menu</span>
                                     </Button>
                                 </SheetTrigger>
@@ -59,7 +59,7 @@ const Navbar = () => {
                                         {/* Header Section */}
                                         <div className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-6 text-white">
                                             <SheetHeader className="text-left">
-                                                <Link href="/" onClick={handleNavClick} className="flex items-center mb-4">
+                                                {/* <Link href="/" onClick={handleNavClick} className="flex items-center mb-4">
                                                     <Image
                                                         src="/images/logo.png"
                                                         alt="Company Logo"
@@ -68,7 +68,7 @@ const Navbar = () => {
                                                         height={48}
                                                         className="h-10 w-auto brightness-0 invert"
                                                     />
-                                                </Link>
+                                                </Link> */}
                                                 <SheetTitle className="sr-only">Main Menu</SheetTitle>
                                                 <SheetDescription className="sr-only">Navigation links for the website.</SheetDescription>
                                             </SheetHeader>
@@ -219,7 +219,7 @@ const Navbar = () => {
 
                         {/* Left Logo - Visible on all screen sizes */}
                         <div className="flex-shrink-0">
-                            <Link href="/" className="flex items-center">
+                            {/* <Link href="/" className="flex items-center">
                                 <Image
                                     src="/images/logo.png"
                                     alt="TripleM Collectibles"
@@ -228,7 +228,7 @@ const Navbar = () => {
                                     priority
                                     className="md:h-14 h-10 w-auto"
                                 />
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* Right side content: Nav Links and Icons */}
@@ -239,7 +239,7 @@ const Navbar = () => {
                                     <Link
                                         key={link.name}
                                         href={link.href}
-                                        className={`text-subtitle hover:text-title transition-colors font-medium duration-200 text-sm ${pathname === link.href ? "text-title underline font-bold" : ""}`}
+                                        className={`hover:opacity-70 transition-colors font-medium duration-200 text-sm ${pathname === link.href ? "border-b-2 border-brand text-brand font-bold" : "text-white"}`}
                                     >
                                         {link.name}
                                     </Link>
@@ -249,8 +249,8 @@ const Navbar = () => {
                             {/* Right Action Icons */}
                             <div className="flex items-center space-x-2">
                                 <div onClick={(e) => handleAuthRedirect(e, '/cart')}>
-                                    <Button variant="ghost" size="icon" className="relative">
-                                        <ShoppingCart className="h-5 w-5 text-subtitle" />
+                                    <Button variant="ghost" size="icon" className="relative hover:bg-brand">
+                                        <ShoppingCart className="h-5 w-5 text-white" />
                                         <span className="sr-only">Shopping Cart</span>
                                         {cart && cart.length > 0 && (
                                             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{cart?.length}</span>
@@ -262,8 +262,8 @@ const Navbar = () => {
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>
                                         <div className="flex items-center cursor-pointer">
-                                            <Button variant="ghost" size="icon" className="">
-                                                <User className="h-5 w-5 text-subtitle" />
+                                            <Button variant="ghost" size="icon" className="hover:bg-brand">
+                                                <User className="h-5 w-5 text-white" />
                                                 <span className="sr-only">Profile</span>
                                             </Button>
                                             {isLoading ? (
@@ -273,8 +273,8 @@ const Navbar = () => {
                                                 </div>
                                             ) : isLoggedIn && (
                                                 <div className="flex items-center gap-1">
-                                                    <span className="hidden md:block text-subtitle text-sm font-medium">{userName}</span>
-                                                    <ChevronDown className="hidden md:block h-4 w-4 text-subtitle" />
+                                                    <span className="hidden md:block text-white text-sm font-medium">{userName}</span>
+                                                    <ChevronDown className="hidden md:block h-4 w-4 mt-[3px] text-white" />
                                                 </div>
                                             )}
                                         </div>
@@ -325,7 +325,7 @@ const Navbar = () => {
 
                                 <Toggle
                                     variant="ghost"
-                                    className="group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent"
+                                    className="group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent text-white hover:bg-brand hover:text-white"
                                     pressed={theme === "dark"}
                                     onPressedChange={() =>
                                         setTheme((prev) => (prev === "dark" ? "light" : "dark"))
