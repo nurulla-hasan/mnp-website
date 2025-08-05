@@ -69,10 +69,10 @@ const FeaturedProducts = () => {
                         {/* Product Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {products.map(({ id, name, price, originalPrice, discountPercentage, rating, imageSrc, imageAlt }) => (
-                                <Card key={id} className="w-full max-w-sm mx-auto bg-white shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden p-0">
+                                <Card key={id} className="w-full max-w-sm mx-auto bg-card text-card-foreground shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">
                                     <CardContent className="p-0">
                                         {/* Image Container */}
-                                        <div className="relative bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
+                                        <div className="relative bg-muted/50 p-6 group-hover:bg-muted transition-colors duration-300">
                                             {/* Discount Badge */}
                                             <Badge className="absolute top-4 left-4 bg-brand hover:bg-brand/90 text-white font-bold px-3 py-1 text-sm z-10">
                                                 {discountPercentage}% Off

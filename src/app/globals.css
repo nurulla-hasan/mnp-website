@@ -5,11 +5,10 @@
   --color-brand: #ff9933;
   --color-skyBlue: #0061bb;
   --color-skyBlue2: #E9F5FF;
-  --color-skyBlue3: #90B8DE;
   --color-title: #333333;
   --color-subtitle: #414141;
-  /* --color-content-bg: #f7f7f7;
-  --color-background: #2b2b2b; */
+  --color-content-bg: #90B8DE;
+  --color-background: #2b2b2b;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -123,14 +122,13 @@
   --sidebar-ring: oklch(0.554 0.135 66.442);
 
   /* Custom theme colors for dark mode */
-  --color-brand: #ff9933;
-  --color-skyBlue: #0084ff;
-  --color-skyBlue2: #E9F5FF;
-  --color-skyBlue3: #90B8DE;
-  --color-title: #ffffff;
+  --color-brand: #ff9933; 
+  --color-skyBlue: #0084ff; 
+  --color-skyBlue2: #0a2d52; 
+  --color-title: #ffffff; 
   --color-subtitle: #cccccc;
-  /* --color-content-bg: #1e1e1e;
-  --color-background: #121212; */
+  --color-content-bg: #0e2034; 
+  --color-background: #121212;
 }
 
 ::-webkit-scrollbar {
