@@ -274,7 +274,7 @@ const Navbar = () => {
                                             ) : isLoggedIn && (
                                                 <div className="flex items-center gap-1">
                                                     <span className="hidden md:block text-white text-sm font-medium">{userName}</span>
-                                                    <ChevronDown className="hidden md:block h-4 w-4 mt-[3px] text-white" />
+                                                    <ChevronDown className="hidden md:block h-4 w-4 text-white" />
                                                 </div>
                                             )}
                                         </div>

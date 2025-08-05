@@ -82,12 +82,12 @@ const Footer = () => {
                                         {...register("email", { required: true })}
                                         type="email"
                                         placeholder="Enter your email"
-                                        className="placeholder:text-white text-white focus:border-0"
+                                        className="focus:border-0"
                                     />
                                     {errors.email && <span className="text-red-500 text-xs ml-1">Email is required</span>}
                                 </div>
                                 <Button
-                                className={"bg-white text-black hover:bg-white/80"}
+                                className={"bg-skyBlue text-white hover:bg-skyBlue/90"}
                                     type="submit"
                                 >
                                     {
