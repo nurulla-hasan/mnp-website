@@ -28,6 +28,10 @@ const Hero = () => {
                         Enhance Your Vape experience
                     </h1>
 
+                    <p className="text-start text-sm sm:text-base md:text-lg text-white mb-8 opacity-90 drop-shadow-lg">
+                        Discover premium flavors and unmatched satisfaction.
+                    </p>
+
                     {/* CTA Button */}
                     <div className="flex justify-start">
                         <Link href="/shop" passHref>
